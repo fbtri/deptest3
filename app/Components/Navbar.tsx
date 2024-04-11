@@ -14,7 +14,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop navigation */}
-        <ul className="flex flex-wrap justify-end"> {/* Added justify-end to align items to the right */}
+        <ul className="flex flex-wrap justify-end lg:flex-no-wrap"> {/* Added lg:flex-no-wrap to prevent wrapping on larger screens */}
   {NAV_LINKS.map((link) => (
     <li key={link.key} className="mr-5">
       <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-small">
