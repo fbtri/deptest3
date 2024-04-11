@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className=" flexBetween max-container padding-containter relative z-30 py-5">
 
 <Link href="/" legacyBehavior>
-<Image src="/Mac App IconW.png" alt="logo" width={40} height={15} />
+<Image src="/Mac App iconW.png" alt="logo" width={40} height={15} />
 </Link>
 
 
