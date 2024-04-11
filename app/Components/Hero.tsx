@@ -23,9 +23,6 @@ const Hero = () => {
         <h1 className="text-5xl font-bold mb-4">Ironman Oceanside 70.3</h1>
         <p className="max-w-md mx-auto mb-8">A race weekend with friends and family</p>
         {/* Link */}
-        <Link href="/weekend">
-            Go to Destination Page
-        </Link>
       </div>
     </div>
   );

@@ -1,8 +1,8 @@
 // NAVIGATION
 export const NAV_LINKS = [
     { href: "/weekend", label: 'TW' },
-    { href: '/', key: 'how_hilink_work', label: 'RP' },
-    { href: '/', key: 'services', label: 'RC' },
-    { href: '/', key: 'pricing ', label: 'P' },
-    { href: '/', key: 'contact_us', label: 'C' },
+    { href: '/racephotos', key: 'how_hilink_work', label: 'RP' },
+    { href: '/racecourse', key: 'services', label: 'RC' },
+    { href: '/raceperformance', key: 'pricing ', label: 'P' },
+    { href: '/contact', key: 'contact_us', label: 'C' },
     ];
