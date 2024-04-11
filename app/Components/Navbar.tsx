@@ -9,9 +9,11 @@ const Navbar = () => {
     <nav className=" flexBetween max-container padding-containter relative z-30 py-5">
 
 <div className="flex justify-between items-center w-full pl-5">
-  <Link href="/" legacyBehavior>
+<Link href="/" legacyBehavior>
+  <div className="cursor-pointer">
     <Image src="/Mac App iconW.png" alt="logo" width={40} height={15} />
-  </Link>
+  </div>
+</Link>
 
   <ul className="flex pr-5">
   {NAV_LINKS.map((link) => (
