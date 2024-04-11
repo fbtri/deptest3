@@ -18,7 +18,7 @@ const Navbar = () => {
   <ul className="flex pr-5">
   {NAV_LINKS.map((link) => (
     <li key={link.key}>
-  <Link href={link.href} className="regular-12 text-gray-50 cursor-pointer transition-all hover:font-bold font-thin" style={{ marginRight: '20px' }}>
+  <Link href={link.href} className="regular-12 text-gray-50 cursor-pointer transition-all hover:font-bold" style={{ marginRight: '20px' }}>
     {link.label}
   </Link>
 </li>
