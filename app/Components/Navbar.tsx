@@ -1,8 +1,9 @@
 
-
-import { NAV_LINKS } from "@/Constants";
+import { NAV_LINKS as NAV_LINKS_LARGE } from "@/Constants"; // Importing large set of navigation links
+import { NAV_LINKS as NAV_LINKS_SMALL } from "@/ConstantsSmall"; // Importing small set of navigation links
 import Image from "next/image";
 import Link from "next/link";
+
 
 const Navbar = () => {
   return (
@@ -16,7 +17,7 @@ const Navbar = () => {
 
         {/* Desktop navigation */}
         <ul className="hidden lg:flex flex flex-wrap pr-5">
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS_LARGE .map((link) => (
             <li key={link.key}>
               <Link href={link.href} className="regular-12 text-gray-50 cursor-pointer transition-all hover:font-bold" style={{ marginRight: '20px' }}>
                 {link.label}
@@ -26,10 +27,10 @@ const Navbar = () => {
         </ul>
 
         <div className="flex lg:hidden"> {/* Added lg:hidden to hide on large screens */}
-          <ul className="flex flex-col mt-5 ml-0">
-            {NAV_LINKS.map((link) => (
+          <ul className="flex flex-wrap mt-2 ml-1">
+            {NAV_LINKS_SMALL.map((link) => (
               <li key={link.key} className="mb-0">
-                <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-small">
+                <Link href={link.href} className="regular-5 text-gray-50 cursor-pointer transition-all hover:font-bold" style={{ marginRight: '20px' }}>
                   {link.label}
                 </Link>
               </li>
