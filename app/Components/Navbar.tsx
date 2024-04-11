@@ -14,15 +14,15 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop navigation */}
-        <ul className="flex flex-wrap">
-          {NAV_LINKS.map((link) => (
-            <li key={link.key} className="mr-5">
-              <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-small">
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <ul className="flex flex-wrap justify-end"> {/* Added justify-end to align items to the right */}
+  {NAV_LINKS.map((link) => (
+    <li key={link.key} className="mr-5">
+      <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-small">
+        {link.label}
+      </Link>
+    </li>
+  ))}
+</ul>
 
         {/* Mobile navigation */}
         <div className="hidden">
