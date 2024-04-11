@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Ensure the navbar appears in front of other content */
+.navbar {
+    z-index: 100; /* Adjust as needed */
+  }
+  
+  /* Ensure the navbar has a transparent background */
+  .navbar {
+    background-color: transparent;
+  }

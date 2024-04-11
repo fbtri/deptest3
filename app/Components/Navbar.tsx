@@ -1,47 +1,49 @@
 import { NAV_LINKS } from "@/Constants";
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 
 const Navbar = () => {
   return (
-    <nav className="flexBetween max-container padding-containter relative z-30 py-5">
-
-      <div className="flex justify-between items-center w-full pl-5">
+    <nav className="navbar fixed top-0 left-10 right-6 z-50 bg-transparent py-5">
+      <div className="max-container padding-container flex justify-between items-center">
         <Link href="/" legacyBehavior>
-          <div className="cursor-pointer">
-            <Image src="/Mac App iconW.png" alt="logo" width={40} height={15} />
+          <div className="cursor-pointer hidden lg:flex">
+            <Image src="/Mac App iconW.png" alt="logo" width={70} height={70} />
           </div>
         </Link>
 
-        <ul className="hidden lg:flex flex flex-wrap pr-5"> {/* Added flex-wrap class */}
+        {/* Desktop navigation */}
+        <ul className="hidden lg:flex flex-wrap">
           {NAV_LINKS.map((link) => (
-            <li key={link.key}>
-              <Link href={link.href} className="regular-12 text-gray-50 cursor-pointer transition-all hover:font-bold" style={{ marginRight: '20px' }}>
+            <li key={link.key} className="mr-5">
+              <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-medium">
                 {link.label}
               </Link>
             </li>
           ))}
         </ul>
 
-      </div>
-
-      <div className="absolute top-0 right-0 mt-5 mr-0 lg:hidden"> {/* Added absolute positioning and margins */}
-  <ul className="flex-col pt-n pr-10">
-    {NAV_LINKS.map((link) => (
-      <li key={link.key} className="mb-4"> {/* Added mb-4 for margin-bottom */}
-        <Link href={link.href} className="regular-12 text-gray-50 cursor-pointer transition-all hover:font-bold" style={{ marginBottom: '10px' }}>
-          {link.label}
+        {/* Mobile navigation */}
+        <div className="lg:hidden">
+          
+          <ul className="flex flex-col mt-5 ml-0">
+          <Link href="/" legacyBehavior>
+          <div className="cursor-pointer">
+            <Image src="/Mac App iconW.png" alt="logo" width={40} height={15} />
+          </div>
         </Link>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
+            {NAV_LINKS.map((link) => (
+              <li key={link.key} className="mb-3">
+                <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-medium">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
-
