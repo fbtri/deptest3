@@ -8,19 +8,18 @@ const Navbar = () => {
   return (
     <nav className=" flexBetween max-container padding-containter relative z-30 py-5">
 
-<Link href="/">
+<Link href="/" legacyBehavior>
 <Image src="/Mac App IconW.png" alt="logo" width={40} height={15} />
 </Link>
 
 
-<ul className="h-full gap-12 lg:flex flex-wrap">
+<ul className="hidden h-full gap-12 lg:flex">
     {NAV_LINKS.map((link) => (
-      <Link href={link.href} key={link.key} className="regular-12 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold mb-2 lg:mb-0">
+      <Link href={link.href} key={link.key} className="recular-12 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
         {link.label}
       </Link>
     ))}
 </ul>
-
 
 <div className="lg:flexCenter hidden">
 <Button
