@@ -14,7 +14,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop navigation */}
-        <ul className="flex flex-wrap justify-end lg:flex-no-wrap"> {/* Added lg:flex-no-wrap to prevent wrapping on larger screens */}
+        <ul className="flex flex-wrap justify-end lg:flex-no-wrap hidden sm:flex"> {/* Added hidden sm:flex to hide on small screens */}
   {NAV_LINKS.map((link) => (
     <li key={link.key} className="mr-5">
       <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-small">
@@ -24,19 +24,18 @@ const Navbar = () => {
   ))}
 </ul>
 
-        {/* Mobile navigation */}
-        <div className="hidden">
-          
-          <ul className="flex flex-wrap mt-5 ml-0">
-            {NAV_LINKS.map((link) => (
-              <li key={link.key} className="mb-0">
-                <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-small">
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+
+<div className="flex lg:hidden"> {/* Added lg:hidden to hide on large screens */}
+  <ul className="flex flex-col mt-5 ml-0">
+    {NAV_LINKS.map((link) => (
+      <li key={link.key} className="mb-0">
+        <Link href={link.href} className="text-white hover:text-gray-300 transition-all font-small">
+          {link.label}
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
       </div>
     </nav>
   );
