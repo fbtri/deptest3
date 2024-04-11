@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -21,10 +22,15 @@ const Hero = () => {
       <div className="relative z-10 max-w-3xl text-white text-center">
         <h1 className="text-5xl font-bold mb-4">Ironman Oceanside 70.3</h1>
         <p className="max-w-md mx-auto mb-8">A race weekend with friends and family</p>
+        {/* Link */}
+        <Link href="/weekend">
+            Go to Destination Page
+        </Link>
       </div>
     </div>
   );
 };
 
 export default Hero;
+
 

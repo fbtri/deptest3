@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/Components/ParenCompo", "app/Components/Dropdown.js"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/Components/ParenCompo", "app/Components/Dropdown.js", "app/TWK/page.jsx"],
   "exclude": ["node_modules"]
 }
